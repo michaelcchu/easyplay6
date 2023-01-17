@@ -24,6 +24,8 @@ function startGame() {
     myGameArea.start();
     pointer = new component(noteWidth, myGameArea.canvas.height, "red", 
     myGameArea.canvas.width/2, 0, 0);
+    middleC = new component(myGameArea.canvas.width, noteHeight, "red", 
+    0, (numberOfNotes - 1 - 60) * noteHeight, 0);
 }
 
 function updateGameArea() {
@@ -32,6 +34,7 @@ function updateGameArea() {
         gamePiece.update();
     }
     pointer.update();
+    middleC.update();
 }
   
 let myGameArea = {
